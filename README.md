@@ -7,6 +7,8 @@ Feautures: 1-Fully automated battle system 2-Complex stat system 3-Fun and repla
 
 Built with: Godot 4.7 GDScript
 
+Playable Link:https://l3m0n-0.itch.io/the-revenge-colony-new
+
 Installation: Download or clone repository Open Godot Import project.godot file Run project
 
 <img width="1155" height="648" alt="Screenshot 2026-11-02 215937" src="https://github.com/user-attachments/assets/f2b688fd-a8f5-4ebd-8381-1e47ad66db24" />
