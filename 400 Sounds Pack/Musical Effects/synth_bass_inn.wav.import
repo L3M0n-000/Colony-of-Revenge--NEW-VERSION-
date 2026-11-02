@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://1dwmh56g1rjs"
+path="res://.godot/imported/synth_bass_inn.wav-c62e33dd403b04b4170b22adc9bfc0d3.sample"
+
+[deps]
+
+source_file="res://400 Sounds Pack/Musical Effects/synth_bass_inn.wav"
+dest_files=["res://.godot/imported/synth_bass_inn.wav-c62e33dd403b04b4170b22adc9bfc0d3.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

@@ -1,0 +1,369 @@
+[gd_scene format=4 uid="uid://cg5vbliu3sn4x"]
+
+[ext_resource type="Texture2D" uid="uid://ctygsbcqqbgvj" path="res://asstes/campsite.png" id="1_81bjr"]
+[ext_resource type="Script" uid="uid://b5oisc7qss6ly" path="res://rest_button.gd" id="1_vkgda"]
+[ext_resource type="FontFile" uid="uid://c1rlfyrdaqdbw" path="res://asstes/Jersey25-Regular.ttf" id="2_dsgub"]
+[ext_resource type="Script" uid="uid://bvuf536v41tva" path="res://label_6.gd" id="3_xbi8m"]
+[ext_resource type="AudioStream" uid="uid://cpfsjm1o5chr4" path="res://inteface_sfx_pack_1_ogg/Ogg/Confirm_tones/style3/confirm_style_3_echo_003.ogg" id="4_1d5pm"]
+[ext_resource type="Texture2D" uid="uid://bkiv7fyiyoyjb" path="res://asstes/pixil-frame-0 (28).png" id="4_vkgda"]
+[ext_resource type="Texture2D" uid="uid://nnkpberunhdl" path="res://Basic 2D Shapes Primitive 128px/Basic 2D Shapes Primitive 128px/grey soft/ShapeA (1).png" id="5_cjkwj"]
+[ext_resource type="Script" uid="uid://dl2ekg1n2udf1" path="res://label_7.gd" id="5_dsgub"]
+[ext_resource type="Texture2D" uid="uid://dbaeexikc0aug" path="res://Cryo's Mini GUI/GUI/Sliced/GUI_1x_sliced.png" id="6_ixkqr"]
+[ext_resource type="Texture2D" uid="uid://drm0worey7g5i" path="res://asstes/pixil-frame-0 (29).png" id="6_k1665"]
+[ext_resource type="Script" uid="uid://se00w3ah4flj" path="res://label_8.gd" id="7_7f4bk"]
+[ext_resource type="Texture2D" uid="uid://cywd7hynnh1a7" path="res://asstes/pixil-frame-0 (30).png" id="8_xbi8m"]
+[ext_resource type="Script" uid="uid://boryrvbf3bxih" path="res://Rest.gd" id="9_cjkwj"]
+[ext_resource type="Texture2D" uid="uid://k8lrg7u8atiy" path="res://asstes/campfire for campsite.png" id="12_dw1hc"]
+[ext_resource type="AudioStream" uid="uid://cqtdt2o1uur1h" path="res://inteface_sfx_pack_1_ogg/Ogg/Confirm_tones/style2/confirm_style_2_echo_003.ogg" id="13_cjkwj"]
+[ext_resource type="AudioStream" uid="uid://dm7i3h84cbtda" path="res://asstes/Far Far Away.ogg" id="13_dsgub"]
+[ext_resource type="Shader" uid="uid://ovrd5ydp8p0q" path="res://shader/transition.gdshader" id="15_1d5pm"]
+[ext_resource type="Script" uid="uid://cio764r8ly3c2" path="res://transition.gd" id="16_cjkwj"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_d2lva"]
+texture = ExtResource("6_ixkqr")
+margins = Vector2i(1, 1)
+separation = Vector2i(1, 1)
+texture_region_size = Vector2i(8, 8)
+12:0/0 = 0
+13:0/0 = 0
+14:0/0 = 0
+14:1/0 = 0
+13:1/0 = 0
+12:1/0 = 0
+12:2/0 = 0
+13:2/0 = 0
+14:2/0 = 0
+6:3/0 = 0
+7:3/0 = 0
+8:3/0 = 0
+6:0/0 = 0
+7:0/0 = 0
+7:1/0 = 0
+6:1/0 = 0
+6:2/0 = 0
+7:2/0 = 0
+8:1/0 = 0
+8:0/0 = 0
+8:2/0 = 0
+9:2/0 = 0
+9:1/0 = 0
+9:0/0 = 0
+10:0/0 = 0
+11:0/0 = 0
+11:1/0 = 0
+10:1/0 = 0
+10:2/0 = 0
+10:3/0 = 0
+11:3/0 = 0
+11:2/0 = 0
+9:3/0 = 0
+12:3/0 = 0
+13:3/0 = 0
+14:3/0 = 0
+1:1/0 = 0
+0:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+2:1/0 = 0
+2:0/0 = 0
+1:0/0 = 0
+0:0/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_dq4r0"]
+tile_size = Vector2i(8, 8)
+sources/0 = SubResource("TileSetAtlasSource_d2lva")
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_6gm7v"]
+texture = ExtResource("6_ixkqr")
+margins = Vector2i(1, 1)
+separation = Vector2i(1, 1)
+texture_region_size = Vector2i(8, 8)
+12:0/0 = 0
+13:0/0 = 0
+14:0/0 = 0
+14:1/0 = 0
+13:1/0 = 0
+12:1/0 = 0
+12:2/0 = 0
+13:2/0 = 0
+14:2/0 = 0
+6:3/0 = 0
+7:3/0 = 0
+8:3/0 = 0
+6:0/0 = 0
+7:0/0 = 0
+7:1/0 = 0
+6:1/0 = 0
+6:2/0 = 0
+7:2/0 = 0
+8:1/0 = 0
+8:0/0 = 0
+8:2/0 = 0
+9:2/0 = 0
+9:1/0 = 0
+9:0/0 = 0
+10:0/0 = 0
+11:0/0 = 0
+11:1/0 = 0
+10:1/0 = 0
+10:2/0 = 0
+10:3/0 = 0
+11:3/0 = 0
+11:2/0 = 0
+9:3/0 = 0
+12:3/0 = 0
+13:3/0 = 0
+14:3/0 = 0
+3:2/0 = 0
+4:2/0 = 0
+5:2/0 = 0
+5:1/0 = 0
+4:1/0 = 0
+3:1/0 = 0
+3:0/0 = 0
+4:0/0 = 0
+5:0/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_nw1ut"]
+tile_size = Vector2i(8, 8)
+sources/0 = SubResource("TileSetAtlasSource_6gm7v")
+
+[sub_resource type="LabelSettings" id="LabelSettings_ixkqr"]
+font = ExtResource("2_dsgub")
+font_size = 32
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dq4r0"]
+bg_color = Color(0.078431375, 0.10980392, 0.21960784, 0.4)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ixkqr"]
+bg_color = Color(0.05571025, 0.081778966, 0.17308411, 0.4)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_d2lva"]
+bg_color = Color(0.14056703, 0.18623039, 0.34552428, 0.4)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7f4bk"]
+atlas = ExtResource("12_dw1hc")
+region = Rect2(0, 0, 128, 150)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1d5pm"]
+atlas = ExtResource("12_dw1hc")
+region = Rect2(128, 0, 128, 150)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cjkwj"]
+atlas = ExtResource("12_dw1hc")
+region = Rect2(256, 0, 128, 150)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ixkqr"]
+atlas = ExtResource("12_dw1hc")
+region = Rect2(384, 0, 128, 150)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_jpyye"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7f4bk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1d5pm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cjkwj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ixkqr")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="Gradient" id="Gradient_ixkqr"]
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_o88mx"]
+gradient = SubResource("Gradient_ixkqr")
+fill_from = Vector2(0, 1)
+
+[sub_resource type="Gradient" id="Gradient_d2lva"]
+colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 1)
+metadata/_snap_count = 100
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_34wtv"]
+gradient = SubResource("Gradient_d2lva")
+fill = 1
+fill_from = Vector2(0.5, 0.47474748)
+fill_to = Vector2(1, 0.02020202)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_dq4r0"]
+shader = ExtResource("15_1d5pm")
+shader_parameter/base_color = Color(0.019607844, 0.007843138, 0.07450981, 1)
+shader_parameter/node_resolution = Vector2(1152, 648)
+shader_parameter/factor = 0.999999977648
+shader_parameter/width = 0.4
+shader_parameter/gradient_texture = SubResource("GradientTexture2D_o88mx")
+shader_parameter/gradient_fixed = true
+shader_parameter/shape_texture = SubResource("GradientTexture2D_34wtv")
+shader_parameter/shape_tiling = 32.0
+shader_parameter/shape_rotation = 0.0
+shader_parameter/shape_scroll = Vector2(0.2, 0)
+shader_parameter/shape_feathering = 0.03999999910592
+shader_parameter/shape_treshold = 1.0
+
+[node name="Node2D" type="Node2D" unique_id=904442492]
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1085508634]
+texture_filter = 1
+offset_right = 1153.0
+offset_bottom = 651.0
+texture = ExtResource("1_81bjr")
+
+[node name="Button" type="Button" parent="." unique_id=1831715008]
+offset_left = 859.0
+offset_top = 15.0
+offset_right = 1139.0
+offset_bottom = 111.0
+theme_override_fonts/font = ExtResource("2_dsgub")
+theme_override_font_sizes/font_size = 64
+text = "REST"
+script = ExtResource("1_vkgda")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Button" unique_id=1614189914]
+stream = ExtResource("4_1d5pm")
+volume_db = -5.0
+
+[node name="TextureRect2" type="TextureRect" parent="." unique_id=603351088]
+visible = false
+self_modulate = Color(0, 0, 0.078431375, 1)
+z_index = 2
+texture_filter = 1
+offset_left = 321.0
+offset_top = 15.0
+offset_right = 840.0
+offset_bottom = 616.0
+texture = ExtResource("5_cjkwj")
+
+[node name="TileMapLayer2" type="TileMapLayer" parent="TextureRect2" unique_id=951161134]
+texture_filter = 1
+scale = Vector2(4.9999995, 4.9999995)
+tile_map_data = PackedByteArray("AAABAAEAAAAAAAAAAAACAAEAAAABAAAAAAADAAEAAAABAAAAAAAEAAEAAAABAAAAAAAFAAEAAAABAAAAAAAGAAEAAAABAAAAAAAHAAEAAAABAAAAAAAIAAEAAAABAAAAAAAJAAEAAAABAAAAAAAKAAEAAAABAAAAAAALAAEAAAACAAAAAAACAAIAAAABAAEAAAACAAMAAAABAAEAAAACAAQAAAABAAEAAAACAAUAAAABAAEAAAACAAYAAAABAAEAAAACAAcAAAABAAEAAAACAAgAAAABAAEAAAACAAkAAAABAAEAAAACAAoAAAABAAEAAAACAAsAAAABAAEAAAACAAwAAAABAAEAAAADAAMAAAABAAEAAAADAAQAAAABAAEAAAADAAUAAAABAAEAAAADAAYAAAABAAEAAAADAAcAAAABAAEAAAADAAgAAAABAAEAAAADAAkAAAABAAEAAAADAAoAAAABAAEAAAADAAsAAAABAAEAAAAEAAMAAAABAAEAAAAEAAQAAAABAAEAAAAEAAUAAAABAAEAAAAEAAYAAAABAAEAAAAEAAcAAAABAAEAAAAEAAgAAAABAAEAAAAEAAkAAAABAAEAAAAEAAoAAAABAAEAAAAEAAsAAAABAAEAAAAFAAMAAAABAAEAAAAFAAQAAAABAAEAAAAFAAUAAAABAAEAAAAFAAYAAAABAAEAAAAFAAcAAAABAAEAAAAFAAgAAAABAAEAAAAFAAkAAAABAAEAAAAFAAoAAAABAAEAAAAFAAsAAAABAAEAAAAGAAMAAAABAAEAAAAGAAQAAAABAAEAAAAGAAUAAAABAAEAAAAGAAYAAAABAAEAAAAGAAcAAAABAAEAAAAGAAgAAAABAAEAAAAGAAkAAAABAAEAAAAGAAoAAAABAAEAAAAGAAsAAAABAAEAAAAHAAMAAAABAAEAAAAHAAQAAAABAAEAAAAHAAUAAAABAAEAAAAHAAYAAAABAAEAAAAHAAcAAAABAAEAAAAHAAgAAAABAAEAAAAHAAkAAAABAAEAAAAHAAoAAAABAAEAAAAHAAsAAAABAAEAAAAIAAMAAAABAAEAAAAIAAQAAAABAAEAAAAIAAUAAAABAAEAAAAIAAYAAAABAAEAAAAIAAcAAAABAAEAAAAIAAgAAAABAAEAAAAIAAkAAAABAAEAAAAIAAoAAAABAAEAAAAIAAsAAAABAAEAAAAJAAMAAAABAAEAAAAJAAQAAAABAAEAAAAJAAUAAAABAAEAAAAJAAYAAAABAAEAAAAJAAcAAAABAAEAAAAJAAgAAAABAAEAAAAJAAkAAAABAAEAAAAJAAoAAAABAAEAAAAJAAsAAAABAAEAAAAKAAMAAAABAAEAAAAKAAQAAAABAAEAAAAKAAUAAAABAAEAAAAKAAYAAAABAAEAAAAKAAcAAAABAAEAAAAKAAgAAAABAAEAAAAKAAkAAAABAAEAAAAKAAoAAAABAAEAAAAKAAsAAAABAAEAAAAKAAIAAAABAAEAAAAJAAIAAAABAAEAAAAIAAIAAAABAAEAAAAHAAIAAAABAAEAAAAGAAIAAAABAAEAAAAFAAIAAAABAAEAAAAEAAIAAAABAAEAAAADAAIAAAABAAEAAAADAAwAAAABAAEAAAAEAAwAAAABAAEAAAAFAAwAAAABAAEAAAAGAAwAAAABAAEAAAAHAAwAAAABAAEAAAAIAAwAAAABAAEAAAAJAAwAAAABAAEAAAAKAAwAAAABAAEAAAALAAIAAAACAAEAAAALAAMAAAACAAEAAAALAAQAAAACAAEAAAALAAUAAAACAAEAAAALAAYAAAACAAEAAAALAAcAAAACAAEAAAALAAgAAAACAAEAAAALAAkAAAACAAEAAAALAAoAAAACAAEAAAALAAsAAAACAAEAAAALAAwAAAACAAEAAAALAA0AAAACAAIAAAAKAA0AAAABAAIAAAAJAA0AAAABAAIAAAAIAA0AAAABAAIAAAAHAA0AAAABAAIAAAAGAA0AAAABAAIAAAAFAA0AAAABAAIAAAAEAA0AAAABAAIAAAADAA0AAAABAAIAAAACAA0AAAABAAIAAAABAA0AAAAAAAIAAAABAAwAAAAAAAEAAAABAAsAAAAAAAEAAAABAAoAAAAAAAEAAAABAAkAAAAAAAEAAAABAAgAAAAAAAEAAAABAAcAAAAAAAEAAAABAAYAAAAAAAEAAAABAAUAAAAAAAEAAAABAAQAAAAAAAEAAAABAAMAAAAAAAEAAAABAAIAAAAAAAEAAAA=")
+tile_set = SubResource("TileSet_dq4r0")
+
+[node name="TileMapLayer3" type="TileMapLayer" parent="TextureRect2" unique_id=53270525]
+modulate = Color(0.37413925, 0.37413928, 0.37413922, 1)
+texture_filter = 1
+scale = Vector2(4.9999995, 4.9999995)
+tile_map_data = PackedByteArray("AAABAAQAAAADAAAAAAABAAUAAAADAAEAAAABAAYAAAADAAEAAAABAAcAAAADAAEAAAABAAgAAAADAAEAAAACAAQAAAAEAAAAAAADAAQAAAAEAAAAAAAEAAQAAAAEAAAAAAAFAAQAAAAEAAAAAAAGAAQAAAAEAAAAAAAHAAQAAAAEAAAAAAAIAAQAAAAEAAAAAAAJAAQAAAAEAAAAAAAKAAQAAAAEAAAAAAALAAQAAAAFAAAAAAALAAUAAAAFAAEAAAALAAYAAAAFAAEAAAALAAcAAAAFAAEAAAALAAgAAAAFAAEAAAABAAoAAAADAAEAAAALAAoAAAAFAAEAAAABAAsAAAADAAIAAAACAAsAAAAEAAIAAAADAAsAAAAEAAIAAAAEAAsAAAAEAAIAAAAFAAsAAAAEAAIAAAAGAAsAAAAEAAIAAAAHAAsAAAAEAAIAAAAIAAsAAAAEAAIAAAAJAAsAAAAEAAIAAAAKAAsAAAAEAAIAAAALAAsAAAAFAAIAAAALAAkAAAAFAAEAAAABAAkAAAADAAEAAAA=")
+tile_set = SubResource("TileSet_nw1ut")
+
+[node name="Label2" type="Label" parent="TextureRect2" unique_id=903296003]
+visible = false
+layout_mode = 0
+offset_left = 60.0
+offset_top = 141.0
+offset_right = 220.0
+offset_bottom = 186.0
+text = "Curreny: + "
+label_settings = SubResource("LabelSettings_ixkqr")
+
+[node name="Label3" type="Label" parent="TextureRect2" unique_id=1145412947]
+layout_mode = 0
+offset_left = 60.0
+offset_top = 220.0
+offset_right = 220.0
+offset_bottom = 265.0
+text = "+"
+label_settings = SubResource("LabelSettings_ixkqr")
+script = ExtResource("3_xbi8m")
+
+[node name="Sprite2D" type="Sprite2D" parent="TextureRect2/Label3" unique_id=1372035142]
+texture_filter = 1
+position = Vector2(345, 22)
+scale = Vector2(0.5390625, 0.5390625)
+texture = ExtResource("4_vkgda")
+
+[node name="Label4" type="Label" parent="TextureRect2" unique_id=685287995]
+layout_mode = 0
+offset_left = 60.0
+offset_top = 296.0
+offset_right = 220.0
+offset_bottom = 341.0
+text = "+"
+label_settings = SubResource("LabelSettings_ixkqr")
+script = ExtResource("5_dsgub")
+
+[node name="Sprite2D" type="Sprite2D" parent="TextureRect2/Label4" unique_id=1979325640]
+texture_filter = 1
+position = Vector2(345, 22)
+scale = Vector2(0.5390625, 0.5390625)
+texture = ExtResource("6_k1665")
+
+[node name="Label5" type="Label" parent="TextureRect2" unique_id=1891604003]
+layout_mode = 0
+offset_left = 61.0
+offset_top = 374.0
+offset_right = 221.0
+offset_bottom = 419.0
+text = "+"
+label_settings = SubResource("LabelSettings_ixkqr")
+script = ExtResource("7_7f4bk")
+
+[node name="Sprite2D" type="Sprite2D" parent="TextureRect2/Label5" unique_id=1751130866]
+texture_filter = 1
+position = Vector2(345, 22)
+scale = Vector2(0.5390625, 0.5390625)
+texture = ExtResource("8_xbi8m")
+
+[node name="Label" type="Label" parent="TextureRect2" unique_id=722252392]
+layout_mode = 0
+offset_left = 42.0
+offset_top = 50.0
+offset_right = 472.0
+offset_bottom = 119.0
+text = "SOME OF YOUR ANTS 
+RECOVERED"
+label_settings = SubResource("LabelSettings_ixkqr")
+horizontal_alignment = 1
+
+[node name="Button" type="Button" parent="TextureRect2" unique_id=393473734]
+texture_filter = 1
+layout_mode = 0
+offset_left = 174.0
+offset_top = 487.00006
+offset_right = 351.71643
+offset_bottom = 550.0
+rotation = 0.0041622766
+theme_override_fonts/font = ExtResource("2_dsgub")
+theme_override_styles/normal = SubResource("StyleBoxFlat_dq4r0")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_ixkqr")
+theme_override_styles/hover = SubResource("StyleBoxFlat_d2lva")
+text = "NEXT"
+script = ExtResource("9_cjkwj")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="TextureRect2/Button" unique_id=1732407093]
+stream = ExtResource("13_cjkwj")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=368329364]
+texture_filter = 1
+position = Vector2(557, 538)
+scale = Vector2(0.82421845, 0.82421845)
+sprite_frames = SubResource("SpriteFrames_jpyye")
+autoplay = "default"
+frame_progress = 0.79332274
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=211456754]
+stream = ExtResource("13_dsgub")
+volume_db = -5.0
+autoplay = true
+parameters/looping = true
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=962717966]
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer" unique_id=524670045]
+material = SubResource("ShaderMaterial_dq4r0")
+offset_right = 1167.0
+offset_bottom = 651.0
+mouse_filter = 2
+script = ExtResource("16_cjkwj")
+
+[connection signal="pressed" from="Button" to="Button" method="_on_pressed"]
+[connection signal="pressed" from="TextureRect2/Button" to="TextureRect2/Button" method="_on_pressed"]

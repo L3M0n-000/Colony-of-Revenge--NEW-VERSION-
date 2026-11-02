@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://31qn4h5pqlvr"
+path="res://.godot/imported/clothing_1.wav-cdc37455a562bac7bd5e03d53c45e4fa.sample"
+
+[deps]
+
+source_file="res://400 Sounds Pack/Materials/clothing_1.wav"
+dest_files=["res://.godot/imported/clothing_1.wav-cdc37455a562bac7bd5e03d53c45e4fa.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

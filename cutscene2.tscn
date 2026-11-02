@@ -1,0 +1,94 @@
+[gd_scene format=3 uid="uid://mlgjgjk5j730"]
+
+[ext_resource type="Texture2D" uid="uid://cixvibpj0p51j" path="res://asstes/cutscene 2.png" id="1_ncxyc"]
+[ext_resource type="FontFile" uid="uid://c1rlfyrdaqdbw" path="res://asstes/Jersey25-Regular.ttf" id="1_q18ei"]
+[ext_resource type="Script" uid="uid://jktad8xulubv" path="res://cut_button2.gd" id="3_ncxyc"]
+[ext_resource type="AudioStream" uid="uid://duwl8ltxnh3kj" path="res://inteface_sfx_pack_1_ogg/Ogg/Cursor_tones/cursor_style_2.ogg" id="4_2f4n6"]
+[ext_resource type="Shader" uid="uid://ovrd5ydp8p0q" path="res://shader/transition.gdshader" id="5_vpmk2"]
+[ext_resource type="Script" uid="uid://cio764r8ly3c2" path="res://transition.gd" id="6_2f4n6"]
+[ext_resource type="AudioStream" uid="uid://dm7i3h84cbtda" path="res://asstes/Far Far Away.ogg" id="12_v3x7e"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_orua6"]
+font = ExtResource("1_q18ei")
+font_size = 32
+font_color = Color(18.892002, 18.892002, 18.892002, 1)
+outline_size = 5
+outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="Gradient" id="Gradient_nchri"]
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_4fwpj"]
+gradient = SubResource("Gradient_nchri")
+fill_from = Vector2(0, 1)
+
+[sub_resource type="Gradient" id="Gradient_u60b0"]
+colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 1)
+metadata/_snap_count = 100
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_kgbu2"]
+gradient = SubResource("Gradient_u60b0")
+fill = 1
+fill_from = Vector2(0.5, 0.47474748)
+fill_to = Vector2(1, 0.02020202)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_q18ei"]
+shader = ExtResource("5_vpmk2")
+shader_parameter/base_color = Color(0.019607844, 0.007843138, 0.07450981, 1)
+shader_parameter/node_resolution = Vector2(1152, 648)
+shader_parameter/factor = 0.999999977648
+shader_parameter/width = 0.4
+shader_parameter/gradient_texture = SubResource("GradientTexture2D_4fwpj")
+shader_parameter/gradient_fixed = true
+shader_parameter/shape_texture = SubResource("GradientTexture2D_kgbu2")
+shader_parameter/shape_tiling = 32.0
+shader_parameter/shape_rotation = 0.0
+shader_parameter/shape_scroll = Vector2(0.2, 0)
+shader_parameter/shape_feathering = 0.03999999910592
+shader_parameter/shape_treshold = 1.0
+
+[node name="Node2D" type="Node2D" unique_id=1113032858]
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=772341750]
+texture_filter = 1
+offset_right = 1154.0
+offset_bottom = 649.0
+texture = ExtResource("1_ncxyc")
+
+[node name="Button" type="Button" parent="." unique_id=1127806545]
+texture_filter = 1
+offset_left = 894.0
+offset_top = 566.0
+offset_right = 1133.0
+offset_bottom = 639.0
+theme_override_fonts/font = ExtResource("1_q18ei")
+theme_override_font_sizes/font_size = 64
+text = "NEXT"
+script = ExtResource("3_ncxyc")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Button" unique_id=518225721]
+stream = ExtResource("4_2f4n6")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1383949280]
+stream = ExtResource("12_v3x7e")
+autoplay = true
+parameters/looping = true
+
+[node name="Label" type="Label" parent="." unique_id=1057377824]
+visible = false
+offset_right = 40.0
+offset_bottom = 23.0
+text = "After a long journey. You encountered that mans virus harvesting device that held the serum 
+to turn you back into humans. However the mans whereabouts are unknown but maybe one 
+day you will exact your revenge"
+label_settings = SubResource("LabelSettings_orua6")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1396898175]
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer" unique_id=114767110]
+material = SubResource("ShaderMaterial_q18ei")
+offset_right = 1167.0
+offset_bottom = 651.0
+mouse_filter = 2
+script = ExtResource("6_2f4n6")
+
+[connection signal="pressed" from="Button" to="Button" method="_on_pressed"]

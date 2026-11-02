@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://yscn6sph10t7"
+path="res://.godot/imported/synth_cancel.wav-ef9c122204e35e6034d11bd6e55524fe.sample"
+
+[deps]
+
+source_file="res://400 Sounds Pack/UI/synth_cancel.wav"
+dest_files=["res://.godot/imported/synth_cancel.wav-ef9c122204e35e6034d11bd6e55524fe.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

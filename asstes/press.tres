@@ -1,0 +1,6 @@
+[gd_resource type="StyleBoxTexture" format=3 uid="uid://c8afpy3d8mqkb"]
+
+[ext_resource type="Texture2D" uid="uid://balscq2dkhelc" path="res://asstes/pixil-frame-0 (49).png" id="1_jpajb"]
+
+[resource]
+texture = ExtResource("1_jpajb")

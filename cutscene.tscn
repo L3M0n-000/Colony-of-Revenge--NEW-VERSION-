@@ -1,0 +1,210 @@
+[gd_scene format=3 uid="uid://cfeqquiff8xmj"]
+
+[ext_resource type="FontFile" uid="uid://c1rlfyrdaqdbw" path="res://asstes/Jersey25-Regular.ttf" id="1_qcoa3"]
+[ext_resource type="Texture2D" uid="uid://dxubbpm3soc6p" path="res://asstes/cutscene1bg5+6.png" id="2_pvbl2"]
+[ext_resource type="Texture2D" uid="uid://sorlokdntmbx" path="res://asstes/cutscene1bg4.png" id="3_vi1t0"]
+[ext_resource type="Texture2D" uid="uid://cmleeptqh08ys" path="res://asstes/cutscene1bg3.png" id="4_1titf"]
+[ext_resource type="Texture2D" uid="uid://bf434nukqrbqu" path="res://asstes/text5.png" id="5_ed5nn"]
+[ext_resource type="Texture2D" uid="uid://dpoq7adwdcvop" path="res://asstes/cutscene1bg2.png" id="6_5gysb"]
+[ext_resource type="Texture2D" uid="uid://bssc77ngfif3e" path="res://asstes/cutscenebg1.png" id="7_l2u6u"]
+[ext_resource type="Texture2D" uid="uid://c0enuk6wbwxik" path="res://asstes/text2.png" id="8_pby01"]
+[ext_resource type="Texture2D" uid="uid://bg7fhniivei17" path="res://asstes/text3.png" id="9_jyjru"]
+[ext_resource type="Texture2D" uid="uid://n7y3tqaq6x3n" path="res://asstes/text4.png" id="10_3v3wj"]
+[ext_resource type="Script" uid="uid://cua1btlrkqfa1" path="res://cut_button.gd" id="11_pvbl2"]
+[ext_resource type="AudioStream" uid="uid://duwl8ltxnh3kj" path="res://inteface_sfx_pack_1_ogg/Ogg/Cursor_tones/cursor_style_2.ogg" id="12_5gysb"]
+[ext_resource type="AudioStream" uid="uid://dm7i3h84cbtda" path="res://asstes/Far Far Away.ogg" id="12_vi1t0"]
+[ext_resource type="Shader" uid="uid://ovrd5ydp8p0q" path="res://shader/transition.gdshader" id="13_ed5nn"]
+[ext_resource type="Script" uid="uid://cio764r8ly3c2" path="res://transition.gd" id="14_5gysb"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_jpyye"]
+font = ExtResource("1_qcoa3")
+font_size = 64
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_jad71"]
+load_path = "res://.godot/imported/text1.png-0b17e7ec81ad57d7e06bdf742605eae4.ctex"
+
+[sub_resource type="Gradient" id="Gradient_l2u6u"]
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_ed5nn"]
+gradient = SubResource("Gradient_l2u6u")
+fill_from = Vector2(0, 1)
+
+[sub_resource type="Gradient" id="Gradient_pby01"]
+colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 1)
+metadata/_snap_count = 100
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_5gysb"]
+gradient = SubResource("Gradient_pby01")
+fill = 1
+fill_from = Vector2(0.5, 0.47474748)
+fill_to = Vector2(1, 0.02020202)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_jyjru"]
+shader = ExtResource("13_ed5nn")
+shader_parameter/base_color = Color(0.019607844, 0.007843138, 0.07450981, 1)
+shader_parameter/node_resolution = Vector2(1152, 648)
+shader_parameter/factor = 0.999999977648
+shader_parameter/width = 0.4
+shader_parameter/gradient_texture = SubResource("GradientTexture2D_ed5nn")
+shader_parameter/gradient_fixed = true
+shader_parameter/shape_texture = SubResource("GradientTexture2D_5gysb")
+shader_parameter/shape_tiling = 32.0
+shader_parameter/shape_rotation = 0.0
+shader_parameter/shape_scroll = Vector2(0.2, 0)
+shader_parameter/shape_feathering = 0.03999999910592
+shader_parameter/shape_treshold = 1.0
+
+[node name="Node2D" type="Node2D" unique_id=1113032858]
+
+[node name="ColorRect3" type="ColorRect" parent="." unique_id=1748877818]
+offset_right = 1149.0
+offset_bottom = 650.0
+color = Color(0.019607844, 0.007843138, 0.07450981, 1)
+
+[node name="Label2" type="Label" parent="ColorRect3" unique_id=188730783]
+layout_mode = 0
+offset_left = 131.0
+offset_top = 425.0
+offset_right = 1038.0
+offset_bottom = 490.0
+text = "AND I'LL MAKE SURE HE PAYS"
+label_settings = SubResource("LabelSettings_jpyye")
+horizontal_alignment = 1
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1890185044]
+offset_right = 1149.0
+offset_bottom = 650.0
+color = Color(0.019607844, 0.007843138, 0.07450981, 1)
+
+[node name="Label2" type="Label" parent="ColorRect" unique_id=336666178]
+layout_mode = 0
+offset_left = 131.0
+offset_top = 231.0
+offset_right = 1038.0
+offset_bottom = 296.0
+text = "I'LL GATHER OTHER ANTS"
+label_settings = SubResource("LabelSettings_jpyye")
+horizontal_alignment = 1
+
+[node name="ColorRect2" type="ColorRect" parent="." unique_id=1308173440]
+offset_right = 1149.0
+offset_bottom = 650.0
+color = Color(0.019607844, 0.007843138, 0.07450981, 1)
+
+[node name="Label2" type="Label" parent="ColorRect2" unique_id=1848898401]
+layout_mode = 0
+offset_left = 135.0
+offset_top = 59.0
+offset_right = 1042.0
+offset_bottom = 124.0
+text = "I KNEW THAT I HAD TO TAKE REVENGE"
+label_settings = SubResource("LabelSettings_jpyye")
+
+[node name="TextureRect5" type="TextureRect" parent="." unique_id=998515488]
+texture_filter = 1
+offset_right = 1154.0
+offset_bottom = 649.0
+texture = ExtResource("2_pvbl2")
+
+[node name="Label" type="Label" parent="TextureRect5" unique_id=1354130247]
+layout_mode = 0
+offset_left = 288.0
+offset_top = 241.0
+offset_right = 840.0
+offset_bottom = 306.0
+text = "AND WE BECAME ANTS"
+label_settings = SubResource("LabelSettings_jpyye")
+
+[node name="TextureRect4" type="TextureRect" parent="." unique_id=1457699137]
+texture_filter = 1
+offset_right = 1154.0
+offset_bottom = 649.0
+texture = ExtResource("3_vi1t0")
+
+[node name="TextureRect3" type="TextureRect" parent="." unique_id=1846496037]
+texture_filter = 1
+offset_right = 1154.0
+offset_bottom = 649.0
+texture = ExtResource("4_1titf")
+
+[node name="ColorRect4" type="ColorRect" parent="." unique_id=1412681087]
+offset_right = 1247.0
+offset_bottom = 732.0
+color = Color(0, 0, 0, 1)
+
+[node name="Sprite2D" type="Sprite2D" parent="ColorRect4" unique_id=32423436]
+texture_filter = 1
+position = Vector2(654.00006, 302)
+scale = Vector2(1.3, 1.3)
+texture = ExtResource("5_ed5nn")
+
+[node name="TextureRect2" type="TextureRect" parent="." unique_id=1146810360]
+texture_filter = 1
+offset_right = 1154.0
+offset_bottom = 649.0
+texture = ExtResource("6_5gysb")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=772341750]
+texture_filter = 1
+offset_right = 1154.0
+offset_bottom = 649.0
+texture = ExtResource("7_l2u6u")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=646144857]
+visible = false
+texture_filter = 1
+position = Vector2(657.2, 280.80002)
+scale = Vector2(1.3, 1.3)
+texture = SubResource("CompressedTexture2D_jad71")
+
+[node name="Sprite2D2" type="Sprite2D" parent="." unique_id=1646022611]
+visible = false
+texture_filter = 1
+position = Vector2(655, 281.00003)
+scale = Vector2(1.3, 1.3)
+texture = ExtResource("8_pby01")
+
+[node name="Sprite2D3" type="Sprite2D" parent="." unique_id=181511723]
+visible = false
+texture_filter = 1
+position = Vector2(655.19995, 284.8)
+scale = Vector2(1.3, 1.3)
+texture = ExtResource("9_jyjru")
+
+[node name="Sprite2D4" type="Sprite2D" parent="." unique_id=666134762]
+visible = false
+texture_filter = 1
+position = Vector2(653.00006, 290)
+scale = Vector2(1.3, 1.3)
+texture = ExtResource("10_3v3wj")
+
+[node name="Button" type="Button" parent="." unique_id=1127806545]
+texture_filter = 1
+offset_left = 894.0
+offset_top = 566.0
+offset_right = 1133.0
+offset_bottom = 639.0
+theme_override_fonts/font = ExtResource("1_qcoa3")
+theme_override_font_sizes/font_size = 64
+text = "NEXT"
+script = ExtResource("11_pvbl2")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Button" unique_id=1522989811]
+stream = ExtResource("12_5gysb")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1383949280]
+stream = ExtResource("12_vi1t0")
+volume_db = -5.0
+autoplay = true
+parameters/looping = true
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1513295451]
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer" unique_id=513775346]
+material = SubResource("ShaderMaterial_jyjru")
+offset_right = 1167.0
+offset_bottom = 651.0
+mouse_filter = 2
+script = ExtResource("14_5gysb")
+
+[connection signal="pressed" from="Button" to="Button" method="_on_pressed"]

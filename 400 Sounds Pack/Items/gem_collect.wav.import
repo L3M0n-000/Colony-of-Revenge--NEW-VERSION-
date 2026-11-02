@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://ylptygue5ymm"
+path="res://.godot/imported/gem_collect.wav-ab7d35e2868bae0908c5b2a515cc75bd.sample"
+
+[deps]
+
+source_file="res://400 Sounds Pack/Items/gem_collect.wav"
+dest_files=["res://.godot/imported/gem_collect.wav-ab7d35e2868bae0908c5b2a515cc75bd.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

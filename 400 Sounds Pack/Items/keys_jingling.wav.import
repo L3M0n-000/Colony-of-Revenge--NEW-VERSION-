@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://djh70ujdhok08"
+path="res://.godot/imported/keys_jingling.wav-ea84fcc15481128b855552cbdffc0d0d.sample"
+
+[deps]
+
+source_file="res://400 Sounds Pack/Items/keys_jingling.wav"
+dest_files=["res://.godot/imported/keys_jingling.wav-ea84fcc15481128b855552cbdffc0d0d.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

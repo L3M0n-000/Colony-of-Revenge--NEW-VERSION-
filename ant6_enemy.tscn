@@ -1,0 +1,183 @@
+[gd_scene format=3 uid="uid://3emnsa50260v"]
+
+[ext_resource type="Script" uid="uid://bcf6awnsc5ytb" path="res://ant6_enemy_char.gd" id="1_gvvsn"]
+[ext_resource type="Script" uid="uid://cb3kdx0pf1rq3" path="res://ant6_enemy.gd" id="2_gvvsn"]
+[ext_resource type="Texture2D" uid="uid://bcq6561vap0fu" path="res://asstes/pixil-frame-0 (43).png" id="3_gvvsn"]
+[ext_resource type="AudioStream" uid="uid://dr7s218lty73v" path="res://RPG_Essentials_Free/10_Battle_SFX/03_Claw_03.wav" id="3_mujgp"]
+[ext_resource type="Texture2D" uid="uid://e4w1070paito" path="res://Basic 2D Shapes Primitive 128px/Basic 2D Shapes Primitive 128px/grey rough/ShapeA (2).png" id="4_aje5b"]
+[ext_resource type="Script" uid="uid://ju05oqme532o" path="res://ant_range.gd" id="5_ss16u"]
+[ext_resource type="Texture2D" uid="uid://m06fesrnvx64" path="res://asstes/attack effect melee spritesheet.png" id="6_il3kk"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mujgp"]
+atlas = ExtResource("3_gvvsn")
+region = Rect2(0, 0, 256, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1faa4"]
+atlas = ExtResource("3_gvvsn")
+region = Rect2(256, 0, 256, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_aje5b"]
+atlas = ExtResource("3_gvvsn")
+region = Rect2(512, 0, 256, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ss16u"]
+atlas = ExtResource("3_gvvsn")
+region = Rect2(768, 0, 256, 256)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_jpyye"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mujgp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1faa4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_aje5b")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ss16u")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 10.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vd742"]
+size = Vector2(117, 106)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_l05lm"]
+radius = 90.005554
+
+[sub_resource type="LabelSettings" id="LabelSettings_jq5vo"]
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lck3i"]
+atlas = ExtResource("6_il3kk")
+region = Rect2(84, 0, 42, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0eb45"]
+atlas = ExtResource("6_il3kk")
+region = Rect2(0, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hr5jw"]
+atlas = ExtResource("6_il3kk")
+region = Rect2(128, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5jsn8"]
+atlas = ExtResource("6_il3kk")
+region = Rect2(256, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ekys6"]
+atlas = ExtResource("6_il3kk")
+region = Rect2(0, 128, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gvseq"]
+atlas = ExtResource("6_il3kk")
+region = Rect2(128, 128, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_oa1bq"]
+atlas = ExtResource("6_il3kk")
+region = Rect2(256, 128, 128, 128)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_abwld"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lck3i")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0eb45")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hr5jw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5jsn8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ekys6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gvseq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_oa1bq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lck3i")
+}],
+"loop": 0,
+"name": &"default",
+"speed": 20.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_jpyye"]
+radius = 40.112343
+
+[node name="CharacterBody2D" type="CharacterBody2D" unique_id=1842521397 groups=["enemy"]]
+script = ExtResource("1_gvvsn")
+
+[node name="Area2D3" type="Area2D" parent="." unique_id=1929336328]
+script = ExtResource("2_gvvsn")
+
+[node name="AudioStreamPlayer2" type="AudioStreamPlayer" parent="Area2D3" unique_id=828155953]
+stream = ExtResource("3_mujgp")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Area2D3" unique_id=696578031]
+texture_filter = 1
+sprite_frames = SubResource("SpriteFrames_jpyye")
+autoplay = "default"
+flip_v = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D3" unique_id=675876384]
+position = Vector2(-1.5, -1)
+shape = SubResource("RectangleShape2D_vd742")
+
+[node name="Area2D2" type="Area2D" parent="Area2D3" unique_id=960848444]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D3/Area2D2" unique_id=93861479]
+shape = SubResource("CircleShape2D_l05lm")
+
+[node name="ProgressBar" type="ProgressBar" parent="Area2D3" unique_id=358047284]
+offset_left = -70.0
+offset_top = -97.0
+offset_right = 71.0
+offset_bottom = -70.0
+show_percentage = false
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="Area2D3" unique_id=551735608]
+offset_left = -19.0
+offset_top = -122.0
+offset_right = 21.0
+offset_bottom = -99.0
+text = "0"
+label_settings = SubResource("LabelSettings_jq5vo")
+horizontal_alignment = 1
+
+[node name="Sprite2D2" type="Sprite2D" parent="Area2D3" unique_id=1460714309]
+modulate = Color(0.3372549, 1, 1, 0.3137255)
+texture_filter = 1
+position = Vector2(-4.7683716e-07, -0.50000334)
+scale = Vector2(1.546875, 1.5390625)
+texture = ExtResource("4_aje5b")
+script = ExtResource("5_ss16u")
+
+[node name="HitEffect" type="AnimatedSprite2D" parent="Area2D3" unique_id=1574147202]
+texture_filter = 1
+position = Vector2(-2, -6)
+scale = Vector2(1.5, 1.5)
+sprite_frames = SubResource("SpriteFrames_abwld")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1855415974]
+shape = SubResource("CircleShape2D_jpyye")
+
+[node name="Timer" type="Timer" parent="." unique_id=999981600]
+one_shot = true
+
+[connection signal="area_entered" from="Area2D3" to="Area2D3" method="_on_area_entered"]
+[connection signal="area_exited" from="Area2D3" to="Area2D3" method="_on_area_exited"]
+[connection signal="body_entered" from="Area2D3/Area2D2" to="Area2D3" method="_on_area_2d_2_body_entered"]
+[connection signal="timeout" from="Timer" to="Area2D3" method="_on_timer_timeout"]

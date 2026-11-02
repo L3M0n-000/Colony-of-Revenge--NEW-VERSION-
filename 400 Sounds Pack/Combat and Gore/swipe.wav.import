@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://dp6vp53oprh81"
+path="res://.godot/imported/swipe.wav-bd1186991fa9a1913c24a189eb51339e.sample"
+
+[deps]
+
+source_file="res://400 Sounds Pack/Combat and Gore/swipe.wav"
+dest_files=["res://.godot/imported/swipe.wav-bd1186991fa9a1913c24a189eb51339e.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

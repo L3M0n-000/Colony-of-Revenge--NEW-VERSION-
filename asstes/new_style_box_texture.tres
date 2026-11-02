@@ -1,0 +1,11 @@
+[gd_resource type="StyleBoxTexture" format=3 uid="uid://cetffp2mxtps7"]
+
+[ext_resource type="Texture2D" uid="uid://cseuopk54gmoy" path="res://asstes/pixil-frame-0 (52).png" id="1_qymgc"]
+
+[resource]
+texture = ExtResource("1_qymgc")
+expand_margin_left = 5.0
+expand_margin_top = 5.0
+expand_margin_right = 5.0
+expand_margin_bottom = 5.0
+modulate_color = Color(1.2742168, 1.2742168, 1.2742168, 1)

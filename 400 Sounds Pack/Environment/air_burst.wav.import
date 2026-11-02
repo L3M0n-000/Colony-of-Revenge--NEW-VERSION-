@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://de3rcar8fbo08"
+path="res://.godot/imported/air_burst.wav-182a14a38a8f680a44d54de230d10f13.sample"
+
+[deps]
+
+source_file="res://400 Sounds Pack/Environment/air_burst.wav"
+dest_files=["res://.godot/imported/air_burst.wav-182a14a38a8f680a44d54de230d10f13.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

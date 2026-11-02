@@ -1,0 +1,7 @@
+[gd_resource type="StyleBoxTexture" format=3 uid="uid://14vwta7185xq"]
+
+[ext_resource type="Texture2D" uid="uid://cseuopk54gmoy" path="res://asstes/pixil-frame-0 (52).png" id="1_kd42q"]
+
+[resource]
+texture = ExtResource("1_kd42q")
+modulate_color = Color(1.1291975, 1.1291975, 1.1291975, 1)
