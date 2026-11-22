@@ -169,7 +169,7 @@ func _on_timer_timeout() -> void:
 		Global.enemy1_cache.max_health *=2
 		Global.enemy1_cache.get_node("Area2D3/ProgressBar").max_value*=2
 	if Global.enemy2_cache!=null and Global.enemy2_cache.is_in_group("clone"):
-		Global.enemy2cache.health *=2
+		Global.enemy2_cache.health *=2
 		Global.enemy2_cache.max_health *=2
 		Global.enemy2_cache.get_node("Area2D3/ProgressBar").max_value*=2
 	if Global.enemy3_cache!=null and Global.enemy3_cache.is_in_group("clone"):
