@@ -30,7 +30,6 @@ func _ready() -> void:
 	const_hth_max = max_health
 	health_bar.max_value=max_health
 	previous_h=health
-	Global.ant_exist2=true
 	$AudioStreamPlayer.play()
 
 
@@ -69,7 +68,6 @@ func _physics_process(delta: float) -> void:
 		$AnimatedSprite2D.play("default")
 	if health<=0:
 		Global.ally2_pos=Vector2(-1000,-1000)
-		Global.ant_exist2=false
 		queue_free()
 	$Label.text=str(Global.ant2_num)
 	health_bar.value=health
@@ -93,7 +91,6 @@ func _physics_process(delta: float) -> void:
 	else:
 		attacking=false
 	if Global.start==false and mouse_in==true and Input.is_action_just_pressed("click") and Global.tutorial==false:
-		Global.ant_exist2=false
 		queue_free()
 	
 	if Global.start==true and attacking==false:

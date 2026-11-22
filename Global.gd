@@ -28,7 +28,7 @@ var curreny = 300
 var other_path = false
 var ant_atk_type = [2,3,1]
 var ant_atk_type_enemy = [2,3,1,3,2,1,2]
-var difficulty_mod =3.5
+var difficulty_mod =3
 var artifacts_on = [false,false,false,false,false,false,false,false,false,false]
 var artifacts = ["Royal Honey","Dung Beetle Shell","Mitosis serum","Glass canon","Wolf Tooth","Tax documents","Rose Thorn","Rallying Banner","Super potion","Inspiring Speech"]
 var artifacts_desc = [" Drinking it seems to make your\nCarpenter ants more powerful","Hard shell that can be used by turtle ants\nbut it seems too heavy to deal damage with","Can duplicate your fire ants\nbut requires blood from you other 2","Doubles your units attack\nbut halves their health","+50% damage and health if only\none type of unit on the field","Tax your units and\nget money after each room","Cause your enemies to take damage\nwhen attacking your units","Gets some units to join you","combines all the fire ants into one\ncombining their stats and multiplies it by 1.25\nbut you can no longer gain any fire ants","ants deal more damage the more they are"]
@@ -61,6 +61,7 @@ var ant8_found = false
 var first_time = true
 var tutorial = false
 var tutorial_count = 0
+var dead = false
 @onready var map_generation = [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
 @onready var Act1_lvl_antnum = [[15,-1,-1],[10,10,-1],[10,-1,-1],[10,-1,-1],[10,5,-1],[5,5,-1],[5,10,-1],[2,7,-1]]
 @onready var Act1_lvl_anttype = [[0],[0,0],[1],[2],[0,1],[1,1],[2,0],[2,1]]
@@ -175,20 +176,20 @@ func _process(delta: float) -> void:
 			Act1_positions = [[Vector2(578,246),Vector2(385,90),Vector2(850,90)],[Vector2(580,260),Vector2(580,136)],[Vector2(575,100),Vector2(343,224),Vector2(880,224)],[Vector2(578,153)],[Vector2(578,153)],[Vector2(300,90),Vector2(850,90)],[Vector2(577,219),Vector2(850,100)],[Vector2(290,220),Vector2(577,220),Vector2(850,220)]]
 			rewards = [[60,20,10,0],[70,0,20,0],[50,10,10,10],[60,3,3,3],[60,3,3,3],[70,6,6,6],[60,0,10,0],[60,30,0,0]]
 		if act==2:
-			Act1_lvl_antnum = [[15,15,20],[20,20,15],[20,15,15],[15,15,15],[15,15,15],[25,15,15],[25,15,15],[15,15,15]]
-			Act1_lvl_anttype = [[1,1,4],[3,3,3],[2,4,1],[1,1,1],[4,4,4],[1,3,4],[2,1,1],[2,2,2]]
-			Act1_positions = [[Vector2(334,90),Vector2(850,90),Vector2(580,250)],[Vector2(350,240),Vector2(580,240),Vector2(850,240)],[Vector2(575,240),Vector2(745,174),Vector2(380,90)],[Vector2(258,90),Vector2(580,90),Vector2(860,90)],[Vector2(350,240),Vector2(580,240),Vector2(850,240)],[Vector2(300,90),Vector2(580,200),Vector2(750,160)],[Vector2(577,219),Vector2(850,100),Vector2(300,100)],[Vector2(350,240),Vector2(580,240),Vector2(850,240)]]
+			Act1_lvl_antnum = [[15,15,20],[20,20,15],[20,15,15],[15,15,15],[15,15,15],[15,15,-1],[25,15,15],[15,15,15]]
+			Act1_lvl_anttype = [[1,1,4],[3,3,3],[2,4,1],[1,1,1],[4,4,4],[3,4],[2,1,1],[2,2,2]]
+			Act1_positions = [[Vector2(334,90),Vector2(850,90),Vector2(580,250)],[Vector2(350,240),Vector2(580,240),Vector2(850,240)],[Vector2(575,240),Vector2(745,174),Vector2(380,90)],[Vector2(358,90),Vector2(580,90),Vector2(860,90)],[Vector2(350,240),Vector2(580,240),Vector2(850,240)],[Vector2(580,200),Vector2(750,160)],[Vector2(577,219),Vector2(850,100),Vector2(300,100)],[Vector2(350,240),Vector2(580,240),Vector2(850,240)]]
 			rewards = [[80,0,20,0],[90,10,20,10],[90,0,15,15],[80,0,30,0],[90,10,10,10],[100,6,20,6],[90,0,20,10],[70,0,0,30]]
 		if act==3:
 			Act1_lvl_antnum=[[25,25,25],[40,20,20],[30,30,30],[25,30,20],[20,20,20],[20,20,40],[25,20,20],[30,30,30]]
 			Act1_lvl_anttype=[[5,5,5],[2,6,6],[5,1,1],[3,4,6],[6,6,6],[5,5,0],[5,6,6],[6,1,1]]
-			Act1_positions=[[Vector2(281,200),Vector2(581,200),Vector2(881,200)],[Vector2(565,250),Vector2(320,100),Vector2(820,100)],[Vector2(565,250),Vector2(320,100),Vector2(820,100)],[Vector2(565,250),Vector2(320,150),Vector2(820,150)],[Vector2(281,100),Vector2(581,100),Vector2(881,100)],[Vector2(381,230),Vector2(581,100),Vector2(781,230)],[Vector2(565,250),Vector2(320,150),Vector2(820,150)],[Vector2(281,135),Vector2(581,100),Vector2(881,100)]]
+			Act1_positions=[[Vector2(281,200),Vector2(581,200),Vector2(881,200)],[Vector2(565,250),Vector2(320,100),Vector2(820,100)],[Vector2(565,250),Vector2(320,100),Vector2(820,100)],[Vector2(565,250),Vector2(320,150),Vector2(820,150)],[Vector2(381,100),Vector2(581,100),Vector2(881,100)],[Vector2(381,230),Vector2(581,100),Vector2(781,230)],[Vector2(565,250),Vector2(320,150),Vector2(820,150)],[Vector2(381,135),Vector2(581,100),Vector2(881,100)]]
 			rewards=[[130,20,20,20],[130,0,0,60],[130,0,50,0],[140,30,30,30],[140,30,30,30],[120,50,0,0],[150,35,35,35],[110,0,60,0]]
 		
 		if act>=4:
 			Act1_lvl_antnum = [[10,10,15],[15,15,10],[15,10,10],[10,10,10],[10,10,10],[20,10,10],[20,10,10],[10,10,10],[-1,-1,-1]]
 			Act1_lvl_anttype = [[1,1,4],[3,3,3],[2,4,1],[1,1,1],[4,4,4],[1,3,4],[2,1,1],[2,2,2],[]]
-			Act1_positions = [[Vector2(334,90),Vector2(850,90),Vector2(580,250)],[Vector2(350,240),Vector2(580,240),Vector2(850,240)],[Vector2(575,240),Vector2(745,174),Vector2(380,90)],[Vector2(258,90),Vector2(580,90),Vector2(860,90)],[Vector2(350,240),Vector2(580,240),Vector2(850,240)],[Vector2(300,90),Vector2(580,200),Vector2(750,160)],[Vector2(577,219),Vector2(850,100),Vector2(300,100)],[Vector2(350,240),Vector2(580,240),Vector2(850,240)],[]]
+			Act1_positions = [[Vector2(334,90),Vector2(850,90),Vector2(580,250)],[Vector2(350,240),Vector2(580,240),Vector2(850,240)],[Vector2(575,240),Vector2(745,174),Vector2(380,90)],[Vector2(358,90),Vector2(580,90),Vector2(860,90)],[Vector2(350,240),Vector2(580,240),Vector2(850,240)],[Vector2(300,90),Vector2(580,200),Vector2(750,160)],[Vector2(577,219),Vector2(850,100),Vector2(300,100)],[Vector2(350,240),Vector2(580,240),Vector2(850,240)],[]]
 			rewards = [[80,0,20,0],[90,10,20,10],[90,0,15,15],[80,0,30,0],[90,10,10,10],[100,6,20,6],[90,0,20,10],[70,0,0,30],[0,0,0,0]]
 		ally1_pos = Vector2(-1000,-1000)
 		ally2_pos = Vector2(-1000,-1000)
@@ -199,7 +200,8 @@ func _process(delta: float) -> void:
 		ally2_pos = Vector2(-1000,-1000)
 	if ant_exist3==false:
 		ally3_pos = Vector2(-1000,-1000)
-	if ant_exist==false and ant_exist2==false and ant_exist3==false and start==true:
+	if dead==true:
+		dead=false
 		enemy1_pos = Vector2(-1000,-1000)
 		enemy2_pos = Vector2(-1000,-1000)
 		enemy3_pos = Vector2(-1000,-1000)

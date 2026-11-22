@@ -12,6 +12,9 @@ var tutorial_count = 0
 @onready var enemy1_real = false
 @onready var enemy2_real = false
 @onready var enemy3_real = false
+@onready var ant1
+@onready var ant2
+@onready var ant3 
 
 
 
@@ -91,6 +94,21 @@ func _ready() -> void:
 		if ant_enemy3.health<=0:
 			Global.enemy1_pos=Vector2(-1000,-1000)
 func _process(delta: float) -> void:
+	#print("1 ",Global.ant_exist)
+	#print("2 ",Global.ant_exist2)
+	#print("3 ",Global.ant_exist3)
+	if is_instance_valid(ant1) and ant1!=null:
+		Global.ant_exist=true
+	else:
+		Global.ant_exist=false
+	if is_instance_valid(ant2) and ant2!=null:
+		Global.ant_exist2=true
+	else:
+		Global.ant_exist2=false
+	if is_instance_valid(ant3) and ant3!=null:
+		Global.ant_exist3=true
+	else:
+		Global.ant_exist3=false
 	if Global.enemy1_cache != null and not(Global.ant_exist==false and Global.ant_exist2==false and Global.ant_exist3==false and Global.start==true):
 		Global.enemy1_pos=Global.enemy1_cache.position
 		if Global.act<4:
@@ -138,6 +156,7 @@ func _process(delta: float) -> void:
 	if Global.ant_exist==false and Global.ant_exist2==false and Global.ant_exist3==false and Global.start==true:
 		$"CanvasLayer/ColorRect".scene="res://map.tscn"
 		$"CanvasLayer/ColorRect".on=true
+		Global.dead=true
 		Global.start=false
 	if Global.start==true and once==false:
 		$Timer.start()

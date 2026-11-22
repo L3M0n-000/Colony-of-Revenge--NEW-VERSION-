@@ -44,11 +44,13 @@
 [ext_resource type="Script" uid="uid://dul8lh12wpiwi" path="res://tutorial7.gd" id="42_vox2w"]
 [ext_resource type="Script" uid="uid://inlxwvmgb4ii" path="res://tutorial8.gd" id="43_834i8"]
 [ext_resource type="Script" uid="uid://dbososrbyipat" path="res://tutorial12.gd" id="43_bgllr"]
+[ext_resource type="Script" uid="uid://cdoprufftlq5q" path="res://collision_shape_2d.gd" id="43_bruc6"]
 [ext_resource type="Script" uid="uid://3vjgqjo0kc54" path="res://tutorial9.gd" id="44_6f855"]
 [ext_resource type="Script" uid="uid://d1dm057846kno" path="res://tutorial_button.gd" id="44_f2dtv"]
 [ext_resource type="Script" uid="uid://d1ipvij31oq21" path="res://tutorial10.gd" id="45_bgllr"]
 [ext_resource type="AudioStream" uid="uid://duwl8ltxnh3kj" path="res://inteface_sfx_pack_1_ogg/Ogg/Cursor_tones/cursor_style_2.ogg" id="45_f2dtv"]
 [ext_resource type="Script" uid="uid://dwy2ktqwtl8ch" path="res://tutorial11.gd" id="48_bruc6"]
+[ext_resource type="Script" uid="uid://cid58hoh8562o" path="res://collision_shape_2d2.gd" id="49_8hcuy"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_pjn1s"]
 size = Vector2(176, 352)
@@ -873,11 +875,29 @@ font_size = 21
 outline_size = 10
 outline_color = Color(0.45490196, 0.25490198, 0.16862746, 1)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_orua6"]
+size = Vector2(1237, 337.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bruc6"]
+size = Vector2(1237, 323.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_f2dtv"]
+size = Vector2(1187.25, 342)
+
 [sub_resource type="LabelSettings" id="LabelSettings_vox2w"]
 font = ExtResource("16_mhipf")
 font_size = 25
 outline_size = 10
 outline_color = Color(0.45490196, 0.25490198, 0.16862746, 1)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8hcuy"]
+size = Vector2(1169.25, 372)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_k4td3"]
+size = Vector2(1211.875, 160)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_c16f2"]
+size = Vector2(548, 169)
 
 [sub_resource type="LabelSettings" id="LabelSettings_f2dtv"]
 font = ExtResource("16_mhipf")
@@ -1334,7 +1354,7 @@ position = Vector2(1101, 701)
 texture = ExtResource("40_mk7jo")
 script = ExtResource("41_8ushw")
 
-[node name="ColorRect5" type="ColorRect" parent="." unique_id=1554452031]
+[node name="ColorRect5" type="ColorRect" parent="." unique_id=1554452031 groups=["non placable area"]]
 visible = false
 offset_left = -13.0
 offset_top = 407.0
@@ -1343,7 +1363,14 @@ offset_bottom = 654.0
 color = Color(0.15686275, 0.15686275, 0.15686275, 0.36862746)
 script = ExtResource("42_vox2w")
 
-[node name="ColorRect6" type="ColorRect" parent="." unique_id=981248968]
+[node name="Area2D" type="Area2D" parent="ColorRect5" unique_id=1333144342 groups=["non placable area"]]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ColorRect5/Area2D" unique_id=1705370881]
+position = Vector2(619.5, 206.5)
+shape = SubResource("RectangleShape2D_orua6")
+script = ExtResource("43_bruc6")
+
+[node name="ColorRect6" type="ColorRect" parent="." unique_id=981248968 groups=["non placable area"]]
 visible = false
 offset_left = -13.0
 offset_top = -62.0
@@ -1352,7 +1379,14 @@ offset_bottom = 317.0
 color = Color(0.15686275, 0.15686275, 0.15686275, 0.36862746)
 script = ExtResource("42_vox2w")
 
-[node name="ColorRect7" type="ColorRect" parent="." unique_id=1617502732]
+[node name="Area2D" type="Area2D" parent="ColorRect6" unique_id=1944214144 groups=["non placable area"]]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ColorRect6/Area2D" unique_id=580966478]
+position = Vector2(619.5, 179.25)
+shape = SubResource("RectangleShape2D_bruc6")
+script = ExtResource("43_bruc6")
+
+[node name="ColorRect7" type="ColorRect" parent="." unique_id=1617502732 groups=["non placable area"]]
 visible = false
 offset_left = -64.0
 offset_top = 317.0
@@ -1361,7 +1395,14 @@ offset_bottom = 407.0
 color = Color(0.15686275, 0.15686275, 0.15686275, 0.36862746)
 script = ExtResource("42_vox2w")
 
-[node name="ColorRect8" type="ColorRect" parent="." unique_id=935211409]
+[node name="Area2D" type="Area2D" parent="ColorRect7" unique_id=453641044 groups=["non placable area"]]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ColorRect7/Area2D" unique_id=1599942060]
+position = Vector2(-60.25, 57)
+shape = SubResource("RectangleShape2D_f2dtv")
+script = ExtResource("43_bruc6")
+
+[node name="ColorRect8" type="ColorRect" parent="." unique_id=935211409 groups=["non placable area"]]
 visible = false
 texture_filter = 1
 offset_left = 658.0
@@ -1410,6 +1451,13 @@ texture_filter = 1
 position = Vector2(-68, 171)
 texture = ExtResource("40_mk7jo")
 script = ExtResource("41_8ushw")
+
+[node name="Area2D" type="Area2D" parent="ColorRect8" unique_id=2042772121 groups=["non placable area"]]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ColorRect8/Area2D" unique_id=1113803514]
+position = Vector2(628.625, 5)
+shape = SubResource("RectangleShape2D_8hcuy")
+script = ExtResource("43_bruc6")
 
 [node name="Node2D2" type="Node2D" parent="." unique_id=426758051]
 visible = false
@@ -1550,7 +1598,7 @@ position = Vector2(-76, 240)
 texture = ExtResource("40_mk7jo")
 script = ExtResource("41_8ushw")
 
-[node name="ColorRect12" type="ColorRect" parent="." unique_id=530339232]
+[node name="ColorRect12" type="ColorRect" parent="." unique_id=530339232 groups=["non placable area"]]
 visible = false
 offset_left = -13.0
 offset_top = 565.0
@@ -1559,7 +1607,14 @@ offset_bottom = 654.0
 color = Color(0.15686275, 0.15686275, 0.15686275, 0.36862746)
 script = ExtResource("44_6f855")
 
-[node name="ColorRect13" type="ColorRect" parent="." unique_id=244426919]
+[node name="Area2D" type="Area2D" parent="ColorRect12" unique_id=1254368936 groups=["non placable area"]]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ColorRect12/Area2D" unique_id=1077194413]
+position = Vector2(571, 202)
+shape = SubResource("RectangleShape2D_f2dtv")
+script = ExtResource("49_8hcuy")
+
+[node name="ColorRect13" type="ColorRect" parent="." unique_id=244426919 groups=["non placable area"]]
 visible = false
 offset_left = -13.0
 offset_top = -62.0
@@ -1568,7 +1623,14 @@ offset_bottom = 475.0
 color = Color(0.15686275, 0.15686275, 0.15686275, 0.36862746)
 script = ExtResource("44_6f855")
 
-[node name="ColorRect14" type="ColorRect" parent="." unique_id=456137709]
+[node name="Area2D" type="Area2D" parent="ColorRect13" unique_id=1265310244 groups=["non placable area"]]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ColorRect13/Area2D" unique_id=1447438645]
+position = Vector2(569, 337)
+shape = SubResource("RectangleShape2D_f2dtv")
+script = ExtResource("49_8hcuy")
+
+[node name="ColorRect14" type="ColorRect" parent="." unique_id=456137709 groups=["non placable area"]]
 visible = false
 offset_left = -64.0
 offset_top = 475.0
@@ -1577,7 +1639,14 @@ offset_bottom = 565.0
 color = Color(0.15686275, 0.15686275, 0.15686275, 0.36862746)
 script = ExtResource("44_6f855")
 
-[node name="ColorRect15" type="ColorRect" parent="." unique_id=423751482]
+[node name="Area2D" type="Area2D" parent="ColorRect14" unique_id=386601550 groups=["non placable area"]]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ColorRect14/Area2D" unique_id=1886333350]
+position = Vector2(-47.9375, 44)
+shape = SubResource("RectangleShape2D_k4td3")
+script = ExtResource("49_8hcuy")
+
+[node name="ColorRect15" type="ColorRect" parent="." unique_id=423751482 groups=["non placable area"]]
 visible = false
 offset_left = 658.0
 offset_top = 475.0
@@ -1626,6 +1695,13 @@ position = Vector2(-80, -78)
 rotation = 3.1415927
 texture = ExtResource("40_mk7jo")
 script = ExtResource("41_8ushw")
+
+[node name="Area2D" type="Area2D" parent="ColorRect15" unique_id=841916215 groups=["non placable area"]]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ColorRect15/Area2D" unique_id=1494197282]
+position = Vector2(304, 41.5)
+shape = SubResource("RectangleShape2D_c16f2")
+script = ExtResource("49_8hcuy")
 
 [node name="ColorRect16" type="ColorRect" parent="." unique_id=1231036238]
 visible = false

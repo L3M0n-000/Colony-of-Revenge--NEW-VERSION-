@@ -18,6 +18,7 @@ func _process(delta: float) -> void:
 			$"..".tutorial_count=10
 		self.modulate=Color(0,0,0,1)
 		var ant_self = ant.instantiate()
+		$"..".ant1 = ant_self
 		add_sibling(ant_self)
 		ant_self.position=self.position
 		queue_free()

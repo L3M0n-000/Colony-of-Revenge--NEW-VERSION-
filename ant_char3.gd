@@ -27,7 +27,6 @@ func _ready() -> void:
 	const_hth_max = max_health
 	health_bar.max_value=max_health
 	previous_h=health
-	Global.ant_exist3=true
 	$AudioStreamPlayer.play()
 
 
@@ -56,7 +55,6 @@ func _physics_process(delta: float) -> void:
 		max_health=max_health/Global.health_mult
 	if health<=0:
 		Global.ally3_pos=Vector2(-1000,-1000)
-		Global.ant_exist3=false
 		queue_free()
 	#print("3 ",attacking)
 	$Label.text=str(Global.ant3_num)
@@ -79,7 +77,6 @@ func _physics_process(delta: float) -> void:
 	else:
 		attacking=false
 	if Global.start==false and mouse_in==true and Input.is_action_just_pressed("click"):
-		Global.ant_exist3=false
 		queue_free()
 	if Global.start==true and attacking==false:
 		var distance2 = sqrt(pow((self.position.x-Global.enemy2_pos.x),2) + pow((self.position.y-Global.enemy2_pos.y),2))
