@@ -17,8 +17,8 @@ var tutorial_count = 0
 @onready var ant3 
 
 
-
 func _ready() -> void:
+	Global.selected=false
 	if Global.Act1_lvl_antnum[Global.Act1_level_type][0]!=-1:
 		enemy1_real=true
 	if Global.Act1_lvl_antnum[Global.Act1_level_type][1]!=-1:

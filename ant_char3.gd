@@ -76,7 +76,7 @@ func _physics_process(delta: float) -> void:
 		attacking=true
 	else:
 		attacking=false
-	if Global.start==false and mouse_in==true and Input.is_action_just_pressed("click"):
+	if Global.start==false and mouse_in==true and Input.is_action_just_pressed("click") and Global.remove_toggle==false:
 		queue_free()
 	if Global.start==true and attacking==false:
 		var distance2 = sqrt(pow((self.position.x-Global.enemy2_pos.x),2) + pow((self.position.y-Global.enemy2_pos.y),2))

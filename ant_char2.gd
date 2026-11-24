@@ -90,7 +90,7 @@ func _physics_process(delta: float) -> void:
 		attacking=true
 	else:
 		attacking=false
-	if Global.start==false and mouse_in==true and Input.is_action_just_pressed("click") and Global.tutorial==false:
+	if Global.start==false and mouse_in==true and Input.is_action_just_pressed("click") and Global.tutorial==false and Global.remove_toggle==false:
 		queue_free()
 	
 	if Global.start==true and attacking==false:

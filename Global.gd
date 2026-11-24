@@ -62,6 +62,9 @@ var first_time = true
 var tutorial = false
 var tutorial_count = 0
 var dead = false
+var remove_toggle = false
+var icon_toggle = false
+var selected = false
 @onready var map_generation = [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
 @onready var Act1_lvl_antnum = [[15,-1,-1],[10,10,-1],[10,-1,-1],[10,-1,-1],[10,5,-1],[5,5,-1],[5,10,-1],[2,7,-1]]
 @onready var Act1_lvl_anttype = [[0],[0,0],[1],[2],[0,1],[1,1],[2,0],[2,1]]
@@ -230,7 +233,6 @@ func _process(delta: float) -> void:
 		other_path = false
 		ant_atk_type = [2,3,1]
 		ant_atk_type_enemy = [2,3,1,3,2,1,2]
-		difficulty_mod = 3.5
 		artifacts_on = [false,false,false,false,false,false,false,false,false,false]
 		artifacts = ["Royal Honey","Dung Beetle Shell","Mitosis serum","Glass canon","Wolf Tooth","Tax documents","Rose Thorn","Rallying Banner","Super potion","Inspiring Speech"]
 		artifacts_desc = [" Drinking it seems to make your\nCarpenter ants more powerful","Hard shell that can be used by turtle ants\nbut it seems too heavy to deal damage with","Can duplicate your fire ants\nbut requires blood from you other 2","Doubles your units attack\nbut halves their health","+50% damage and health if only\none type of unit on the field","Tax your units and\nget money after each room","Cause your enemies to take damage\nwhen attacking your units","Gets some units to join you","combines all the fire ants into one\ncombining their stats and multiplies it by 1.25\nbut you can no longer gain any fire ants","ants deal more damage the more they are"]

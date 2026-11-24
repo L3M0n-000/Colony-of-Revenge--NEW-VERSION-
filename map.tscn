@@ -9335,7 +9335,7 @@ text = "ATK: 3
 HEALTH: 6
 High damage melee unit that flies and can 
 only be  damaged by carpenter ants. 
-So make sure your  they target the wasp first."
+So make sure they target the wasp first."
 label_settings = SubResource("LabelSettings_fao1u")
 
 [node name="Sprite2D5" type="Sprite2D" parent="Camera2D/TextureRect" unique_id=1592451396]

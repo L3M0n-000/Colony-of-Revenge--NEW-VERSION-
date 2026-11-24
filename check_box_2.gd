@@ -13,16 +13,18 @@ func _process(delta: float) -> void:
 		toggle=false
 		once=false
 	if toggle==true:
-		if once==false:
+		if once==false and Global.selected==false:
 			$AudioStreamPlayer.play()
 			ant_ally=ant.instantiate()
 			add_sibling(ant_ally)
 			once=true
-	if toggle==false and Global.ant_exist2==false:
+			Global.selected=true
+	if toggle==false and Global.ant_exist2==false and Global.icon_toggle==false:
 		if once==true:
 			$AudioStreamPlayer2.play()
 			ant_ally.queue_free()
 			once=false
+			Global.selected=false
 	if Global.start==true:
 		queue_free()
 

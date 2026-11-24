@@ -152,6 +152,7 @@ animations = [{
 
 [node name="CharacterBody2D" type="CharacterBody2D" unique_id=1000088749 groups=["ally", "non placable area"]]
 script = ExtResource("1_5tacl")
+cooldown = null
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1698802557]
 texture_filter = 1
